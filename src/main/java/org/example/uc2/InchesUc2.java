@@ -1,15 +1,15 @@
 package org.example.uc2;
 
-public class Inches {
+public class InchesUc2 {
     private double value;
-    public Inches(double value) {
+    public InchesUc2(double value) {
         this.value = value;
     }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Inches feet = (Inches) o;
+        InchesUc2 feet = (InchesUc2) o;
         return Double.compare(feet.value, value) == 0;
     }
 }
