@@ -67,6 +67,7 @@ public class LengthUc7 {
         return new LengthUc7(convertedValue, targetUnit);
     }
 
+
     public LengthUc7 addAndConvert(LengthUc7 thatLength, LengthUnitUc7 targetUnit) {
         if (thatLength == null) {
             throw new IllegalArgumentException("Length cannot be null");
@@ -80,4 +81,19 @@ public class LengthUc7 {
 
         return new LengthUc7(finalValue, targetUnit);
     }
+    public LengthUc7 addAndConvert(LengthUc7 l1,LengthUc7 l2 ,LengthUnitUc7 targetUnit) {
+        if (l1 == null||l2==null) {
+            throw new IllegalArgumentException("Length cannot be null");
+        }
+        if (targetUnit == null) {
+            throw new IllegalArgumentException("Target unit cannot be null");
+        }
+
+        double sumInBase = l1.convertToBaseUnit() + l2.convertToBaseUnit();
+        double finalValue = convertFromBaseToTargetUnit(sumInBase, targetUnit);
+
+        return new LengthUc7(finalValue, targetUnit);
+    }
+
+
 }

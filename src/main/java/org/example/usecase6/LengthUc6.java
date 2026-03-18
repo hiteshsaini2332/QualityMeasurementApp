@@ -49,6 +49,14 @@ public class LengthUc6 {
         double convertedValue=convertFromBaseToTargetUnit(baseValue,targetUnit);
         return new LengthUc6(convertedValue,targetUnit);
     }
+    public LengthUc6 add(double first,double second,LengthUnitUc6 targetUnit){
+        if (targetUnit == null) {
+            throw new IllegalArgumentException("Unit cannot be null");
+        }
+        double sum=first+second;
+        double finalValue = convertFromBaseToTargetUnit(sum, targetUnit);
+        return new LengthUc6(finalValue, targetUnit);
+    }
     public LengthUc6 add(LengthUc6 thatLength){
         if(thatLength==null){ throw new IllegalArgumentException("Length cannot be null");}
         double base=thatLength.convertToBaseUnit();
