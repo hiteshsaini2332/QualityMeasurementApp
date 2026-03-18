@@ -40,10 +40,8 @@ public class LengthUc5 {
             throw new IllegalArgumentException("Invalid numeric value");
         }
 
-        // convert to base (inches)
-        double baseValue = value * source.getFactor();
 
-        // convert to target
+        double baseValue = value * source.getFactor();
         return baseValue / target.getFactor();
     }
     public LengthUc5 convertTo(LengthUnitUc5 targetUnit) {
