@@ -1,7 +1,7 @@
 import org.example.uc1.FeetUc1;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-public class UseCase1_Testing {
+public class Uc1Test {
     @Test
     void testFeetEquality_SameValue(){
         FeetUc1 f1 = new FeetUc1(1.0);
