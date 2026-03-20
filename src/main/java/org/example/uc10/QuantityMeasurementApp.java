@@ -2,7 +2,6 @@ package org.example.uc10;
 
 public class QuantityMeasurementApp {
 
-    // ✅ Equality (returns boolean)
     public static <U extends IMeasurable> boolean demonstrateEquality(
             Quantity<U> q1, Quantity<U> q2) {
 
@@ -11,7 +10,6 @@ public class QuantityMeasurementApp {
         return result;
     }
 
-    // ✅ Conversion (returns Quantity)
     public static <U extends IMeasurable> Quantity<U> demonstrateConversion(
             Quantity<U> q, U targetUnit) {
 
@@ -20,7 +18,6 @@ public class QuantityMeasurementApp {
         return result;
     }
 
-    // ✅ Addition (returns Quantity)
     public static <U extends IMeasurable> Quantity<U> demonstrateAddition(
             Quantity<U> q1, Quantity<U> q2) {
 
@@ -28,8 +25,6 @@ public class QuantityMeasurementApp {
         System.out.println(q1 + " + " + q2 + " → " + result);
         return result;
     }
-
-    // ✅ Addition with target unit
     public static <U extends IMeasurable> Quantity<U> demonstrateAddition(
             Quantity<U> q1, Quantity<U> q2, U targetUnit) {
 
@@ -40,7 +35,6 @@ public class QuantityMeasurementApp {
 
     public static void main(String[] args) {
 
-        // 🔹 Length
         Quantity<LengthUnitUc10> l1 = new Quantity<>(1, LengthUnitUc10.FEET);
         Quantity<LengthUnitUc10> l2 = new Quantity<>(12, LengthUnitUc10.INCHES);
 
@@ -50,7 +44,6 @@ public class QuantityMeasurementApp {
 
         System.out.println();
 
-        // 🔹 Weight
         Quantity<WeightUnitUc10> w1 = new Quantity<>(1, WeightUnitUc10.KILOGRAM);
         Quantity<WeightUnitUc10> w2 = new Quantity<>(1000, WeightUnitUc10.GRAM);
 
